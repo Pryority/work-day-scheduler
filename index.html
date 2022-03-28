@@ -45,10 +45,13 @@
               <p class="text-right">9:00</p>
             </div>
           </div>
-          <div class="col-9 bg-success border border-dark">
-                <div id="input" class="row">
-                  <input class=" w-100"></input>
-                </div>
+          <div id="task-container" class="col-9 px-0 bg-success border border-dark">
+            <!-- <div class="row justify-content-start p-2"> -->
+              <span id="task" class="text-left p-2 flex-column"></span>
+            <!-- </div> -->
+                <!-- <div id="input-container" class="row">
+                  <input id="input" class=" w-100"></input>
+                </div> -->
           </div>
           <div class="col-1 bg-danger border border-dark align-items-start">
             <div id="save-container" class="row justify-content-center">
@@ -72,7 +75,8 @@
       <!-- THEN the saved events persist -->
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
