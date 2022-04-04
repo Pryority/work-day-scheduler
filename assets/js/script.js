@@ -1,5 +1,6 @@
 let taskDiv = $('#task-div');
-let saveBtn = $('save-button');
+let saveDiv = $('#save-div');
+let saveBtn = $('#save-button');
 let textarea = $('#task-textarea');
 let textareaDiv = $('#task-textarea-div');
 let presentDate = $('#present-date');
@@ -13,13 +14,14 @@ taskDiv.on('click', () => {
 
 saveTask = () => {
   // do nothing if there isn't any value (text) within the textarea
-  if (!textarea.value) {
-    return
-  }
+  // if (!textarea.value) {
+  //   return
+  // }
+  // console.log('saving task')
   // if there IS some value in the textarea, 
   // set the textarea value to be a local storage item
 
 };
 
-saveBtn.on('click', saveTask);
+saveDiv.on('click', saveBtn, console.log('sat'));
 textarea.hide();
