@@ -1,58 +1,25 @@
-const m = moment().format('LT');
-var inputEl = $('input');
-var taskContainerEl = $('task-container');
+let taskDiv = $('#task-div');
+let saveBtn = $('save-button');
+let textarea = $('#task-textarea');
+let textareaDiv = $('#task-textarea-div');
+let presentDate = $('#present-date');
+let saved = false;
 
-
-$(function() {
-  taskContainerEl.innerHTML = '<p>'
-  taskContainerEl.innerText = 'test'
-  console.log(taskContainerEl);
+taskDiv.on('click', () => {
+  textareaDiv.hide();
+  textarea.show().focus();
+  saveTask();
 });
 
-// var taskFormHandler = function(event) {
-//     event.preventDefault();
-//     var taskInput = document.querySelector("input[name='task-name'").value;
-  
-//     // check if inputs are empty (validate)
-//     if (taskNameInput === "" || taskTypeInput === "") {
-//       alert("You need to fill out the task form!");
-//       return false;
-//     }
-    
-//     inputEl.reset();
-  
-//     // reset form fields for next task to be entered
-//     document.querySelector("input[name='task-name']").value = "";
-//     document.querySelector("select[name='task-type']").selectedIndex = 0;
-  
-//     var taskDataObj = {
-//       name: taskNameInput      
-//     };
-  
-//     createTaskEl(taskDataObj);
-// };
+saveTask = () => {
+  // do nothing if there isn't any value (text) within the textarea
+  if (!textarea.value) {
+    return
+  }
+  // if there IS some value in the textarea, 
+  // set the textarea value to be a local storage item
 
+};
 
-// var taskContainerEl = $('task-container');
-// var inputContainerEl = $('input-container');
-// var saveBtnEl = $('save');
-
-// var showInput = function(event) {
-//     event.preventDefault();
-//     inputContainerEl.show();
-//     alert('adsg')
-// }
-
-// $(function(){
-    
-//     console.log(m)
-//     inputContainerEl.hide();
-//     inputEl.hide();
-//     saveBtnEl.on('click', showInput())
-   
-
-//     taskContainerEl.on('click', 'span', function(){
-//        console.log('hello worldd')
-//     });
-// }); 
-
+saveBtn.on('click', saveTask);
+textarea.hide();

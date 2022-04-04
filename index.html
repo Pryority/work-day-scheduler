@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="./assets/css/style.css"/>
     <title>Work Day Scheduler</title>
   </head>
-
   <body>
     <header>
       <div class="bg-indigo-500">
@@ -28,12 +27,15 @@
         </div>
         <div id="task-div" class="bg-emerald-400 p-2 w-full">
           <div>
-            <textarea id="time" class="text-left w-full flex-start items-center">Placeholder task text for this time.</textarea>
+            <textarea id="task-textarea" class="text-left w-full flex-start items-center"></textarea>
+          </div>
+          <div>
+            <div id="task-textarea-div" class="text-left w-full flex-start items-center"></div>
           </div>
         </div>
         <div id="save-div" class="bg-yellow-400 p-5">
           <div>
-             <svg id="save-button" class="save fill-slate-600 hover:fill-slate-900" xmlns="http://www.w3.org/2000/svg" 
+             <svg id="save-button" class="save fill-slate-700 hover:fill-slate-900" xmlns="http://www.w3.org/2000/svg" 
                 height="24" 
                 width="24" 
                 viewBox="0 0 24 24">
@@ -45,20 +47,6 @@
       </div>
     </main>
       
-     
-      <!-- WHEN I view the time blocks for that day -->
-
-      <!-- THEN each time block is color-coded to indicate whether it is in the past, present, or future -->
-
-      <!-- WHEN I click into a time block -->
-
-      <!-- THEN I can enter an event -->
-
-      <!-- WHEN I click the save button for that time block -->
-      <!-- THEN the text for that event is saved in local storage -->
-      <!-- WHEN I refresh the page -->
-      <!-- THEN the saved events persist -->
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
