@@ -12,43 +12,36 @@
   </head>
   <body>
     <header>
-      <div class="bg-indigo-500">
+      <div id="date-container" class="bg-indigo-500">
         <h1 class="mx-auto text-center">Work Day Scheduler</h1>
         <p class="mx-auto text-center">A simple calendar app for scheduling your work day</p>
-        <p id="present-date" class="mx-auto text-center">04/04/2022</p>
       </div>
     </header>
     <main>
       <div id="main-bg" class="flex flex-row bg-indigo-200">
-        <div id="time-div" class="bg-yellow-400 p-5">
-          <div>
-            <p id="time" class="text-right flex-end items-center">9:00</p>
+        <section id="hour-container" class="bg-yellow-400 p-5">
+          <div id="hour-div">
+            <!-- <p id="hour-text" class="text-right flex-end items-center">9:00</p> -->
           </div>
-        </div>
-        <div id="task-div" class="bg-emerald-400 p-2 w-full">
-          <div>
-            <textarea id="task-textarea" class="text-left w-full flex-start items-center"></textarea>
-          </div>
-          <div>
-            <div id="task-textarea-div" class="text-left w-full flex-start items-center"></div>
-          </div>
-        </div>
-        <div id="save-div" class="bg-yellow-400 p-5">
-          <div>
-             <svg id="save-button" class="save fill-slate-700 hover:fill-slate-900" xmlns="http://www.w3.org/2000/svg" 
-                height="24" 
-                width="24" 
-                viewBox="0 0 24 24">
-                <path d="M0 0h24v24H0z" fill="none"/>
-                <path d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"/>
-              </svg>
-          </div>
-        </div>
+        </section>
+        <section id="task-section" class="bg-emerald-400 w-full p-2">
+          <ul id="task-list">
+            <textarea id="task-input" class="text-left w-full flex-start items-center"></textarea>
+          </ul>
+        </section>
+        <section id="save-div" class="bg-yellow-400 p-5">
+            <svg id="save-button" class="save fill-slate-700 hover:fill-slate-900" xmlns="http://www.w3.org/2000/svg" 
+              height="24" 
+              width="24" 
+              viewBox="0 0 24 24">
+              <path d="M0 0h24v24H0z" fill="none"/>
+              <path d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"/>
+            </svg>
+          </section>
       </div>
     </main>
-      
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
