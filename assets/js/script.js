@@ -1,7 +1,7 @@
 
 // current date
 var dateContainer = $('#date-container')
-var newDate = new Date('01/12/2016');
+var newDate = moment().format('dddd MMMM Do');
 var date = "<p>" + newDate + "</p>";
 var currentDate = $(date);
 
@@ -49,6 +49,5 @@ saveBtn.on('click', () => {
 });
 
 // current date desired format
-// moment().format('dddd MMMM Do');
 // current hour desired format
 // moment().format('LT');   // 10:12 AM
